@@ -18,7 +18,7 @@ pipeline {
         stage('Package') {
             steps {
                 echo 'Packaging...'
-                bat 'c:/Users/Administrator/AppData/Local/Programs/Python/Python39/python.exe -m build'
+                // bat 'c:/Users/Administrator/AppData/Local/Programs/Python/Python39/python.exe -m build'
             }
         }
         stage('Acceptance tests') {
@@ -29,10 +29,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                withCredentials([usernamePassword(credentialsId: 'nexus_credentials', usernameVariable: 'USER', passwordVariable: 'USERPASS')]) {
-                    echo "$USER $USERPASS"
-                    bat "twine upload  --repository-url http://localhost:8081/repository/hosted-python/ dist/* -u${USER} -p${USERPASS}"
-                }
+                //withCredentials([usernamePassword(credentialsId: 'nexus_credentials', usernameVariable: 'USER', passwordVariable: 'USERPASS')]) {
+                //    echo "$USER $USERPASS"
+                //    bat "twine upload  --repository-url http://localhost:8081/repository/hosted-python/ dist/* -u${USER} -p${USERPASS}"
+                //}
             }
         }
     }
