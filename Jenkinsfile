@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',url: 'https://github.com/ricardoahumada/python-package-flask-test'
+                git branch: 'develop',url: 'https://github.com/ricardoahumada/python-package-flask-test'
 	        }
         }        
         stage('Unit/Integration tests') {
