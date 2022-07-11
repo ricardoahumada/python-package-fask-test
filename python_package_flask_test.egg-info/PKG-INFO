@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: python-package-flask-test
+Version: 0.1
+Summary: An example python-package-flask-test
+Home-page: https://github.com/ricardoahumada/python-package-flask-test
+Author: Ricardo Ahumada
+Author-email: ricardo@enmotionvalue.com
+License: MIT
+
+An example python-package-flask-test
