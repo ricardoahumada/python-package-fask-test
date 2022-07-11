@@ -10,6 +10,7 @@ from app.customer.customer_manager import CustomerManager
 from app.customer.customer import Customer
 
 app = Flask(__name__)
+# app.debug = False
 app.debug = True
 app.config['SECRET_KEY'] = 'super-secret'
 toolbar = DebugToolbarExtension(app)
