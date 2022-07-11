@@ -9,6 +9,8 @@
 ## Test execution
 - py -m unittest discover -s tests/unit -v
 - py -m unittest discover -s tests/acceptance -v
+- py -m unittest discover -s tests/acceptance-ext -v
+  - For this is necessary that the service be running
 
 ## Build package
 - py -m build
