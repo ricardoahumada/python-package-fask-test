@@ -5,14 +5,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master',url: 'https://github.com/ricardoahumada/python-package-example' 
+                git branch: 'main',url: 'https://github.com/ricardoahumada/python-package-flask-test' 
                 bat 'rd /s /q "dist"'
                 bat 'dir'
 	        }
         }        
-        stage('Unit tests') {
+        stage('Unit/Integration tests') {
             steps {
-                echo 'Testing...'
+                echo 'Unit/Integration...'
             }
         }
         stage('Package') {

@@ -7,8 +7,8 @@
 - http://localhost:5000/api/v1/customers/
 
 ## Test execution
-- py -m unittest discover -s tests\unit -v
-- py -m unittest discover -s tests\acceptance -v
+- py -m unittest discover -s tests/unit -v
+- py -m unittest discover -s tests/acceptance -v
 
 ## Build package
 - py -m build
