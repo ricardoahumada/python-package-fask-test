@@ -24,5 +24,5 @@
 - Authenticate: http://localhost:5000/api/v1/token
   - Method POST
   - Payload {"email":"user@test.com","password":"passwordjd"}
-- http://localhost:5000/api/v1/restricted/ endpoint require token in header
+- http://localhost:5000/api/v1/restricted endpoint require token in header
   - {Authorization: Bearer <token>}
