@@ -1,6 +1,5 @@
 import json
 import re
-from tkinter.messagebox import NO
 
 class Customer:
     id = 0
