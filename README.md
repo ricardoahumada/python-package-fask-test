@@ -28,3 +28,5 @@
   - Payload {"email":"user@test.com","password":"passwordjd"}
 - http://localhost:5000/api/v1/restricted endpoint require token in header
   - {Authorization: Bearer <token>}
+
+  

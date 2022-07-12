@@ -10,6 +10,10 @@ class TestCustomer(unittest.TestCase):
         self.customer.update_email(newEmail)
         self.assertEqual(self.customer.email,newEmail)
 
+        newEmail='new@j'
+        self.customer.update_email(newEmail)
+        self.assertEqual(self.customer.email,newEmail)
+
         self.customer.update_email(None)
         self.assertEqual(self.customer.email,newEmail)
 

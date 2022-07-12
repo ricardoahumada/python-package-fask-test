@@ -23,6 +23,8 @@ class TestApp(unittest.TestCase):
         data=json.loads(response.text)
         print(f"post: {data}")
         self.assertEqual(response.status_code, 200)
+        self.assertTrue(data['id'] != None)
+
 
     def test_3_get_none(self):
         tester = app.test_client(self)
@@ -31,6 +33,7 @@ class TestApp(unittest.TestCase):
         print(f"get 2: {data}")
         self.assertEqual(response.status_code, 200)
         self.assertTrue(len(data)>0)
+        
 
     def test_4_testToken(self):
         tester = app.test_client(self)
