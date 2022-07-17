@@ -1,3 +1,6 @@
+# Install kubernetes cli plugin
+- https://plugins.jenkins.io/kubernetes-cli/
+
 # Download credentials
 - scp ubuntu@54.211.240.46:.kube/config k8-config
 - Create a secret file credentials in jenkins
