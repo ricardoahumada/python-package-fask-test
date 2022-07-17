@@ -46,8 +46,10 @@ pipeline {
         }
         stage('Apply Kubernetes ') {
             steps {
-                sh 'kubectl apply -f k8-app-deploy/1-python-package-flask-test_deployment.yaml'
-                sh 'kubectl apply -f k8-app-deploy/2-python-package-flask-test_service.yaml'
+                withKubeConfig([credentialsId: 'k8-credentials']) {
+                    sh 'kubectl apply -f k8-app-deploy/1-python-package-flask-test_deployment.yaml'
+                    sh 'kubectl apply -f k8-app-deploy/2-python-package-flask-test_service.yaml'
+                }
             }
         }
     }
