@@ -13,5 +13,5 @@
 
 # Change permissions to cert files
 - sudo apt install -y acl
-- setfacl -R -m u:jenkins:rwx /home/ubuntu/.minikube/profiles/minikube/
+- setfacl -R -m u:jenkins:rwx /home/ubuntu
 
