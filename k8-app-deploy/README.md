@@ -7,10 +7,13 @@
 ### Service:
 	- Manually:
 		- kubectl expose deployment python-package-flask-test-deployment --type=NodePort --port=5000
-	 	- kubectl port-forward service/python-package-flask-test-deployment 5000:5000
  	- Using yaml:
 		- kubectl apply -f 2-python-package-flask-test_service.yaml
-		- kubectl port-forward service/python-package-flask-test-service 5000:5000
+### Expose exterally:
+		- Manual:
+			- kubectl port-forward service/python-package-flask-test-service 5000:5000
+		- Ingress:
+			- kubectl apply -f python-package-flask-test-ingress.yaml
 	- Consume:
 		- curl localhost:5000/api/v1/restricted
 
