@@ -14,5 +14,5 @@ spec:
     targetPort: http
     # nodePort: 30163 #30000-32767 # uncomment if NodePort used
     protocol: TCP
-    name: http
+    name: http-svc
 
