@@ -1,5 +1,4 @@
 resources:
   - 1-python-package-flask-test_deployment.yaml
   - 2-python-package-flask-test_service.yaml
-  - python-package-flask-test-ingress.yaml
   

@@ -10,11 +10,9 @@
  	- Using yaml:
 		- kubectl apply -f 2-python-package-flask-test_service.yaml
 ### Expose exterally:
-		- Manual:
-			- kubectl port-forward service/python-package-flask-test-service 5000:5000
-		- Ingress:
-			- kubectl apply -f python-package-flask-test-ingress.yaml
-	- Consume:
+	- Manual:
+		- kubectl port-forward service/python-package-flask-test-service 5000:5000		
+### Consume:
 		- curl localhost:5000/api/v1/restricted
 
 ### Clean up
