@@ -6,7 +6,7 @@ metadata:
     app: python-package-flask-test
 spec:
   rules:
-    - host: 54.211.240.46
+    - host: localhost
       http:
         paths:
           - path: /
