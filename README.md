@@ -16,7 +16,7 @@
 - py -m build
 
 ## Publish package
-- twine upload  --repository-url http://localhost:8081/repository/hosted-python/ dist/* -u${USER} -p${USERPASS}
+- twine upload  --repository-url http://localhost:8081/repository/hosted-python/ dist/* -u\${USER} -p\${USERPASS}
 
 ## Authentication:
 - Email: user@test.com
