@@ -11,9 +11,14 @@
 		- kubectl apply -f 2-python-package-flask-test_service.yaml
 ### Expose exterally:
 	- Manual:
-		- kubectl port-forward service/python-package-flask-test-service 5000:5000		
+		- kubectl port-forward service/python-package-flask-test-service 5000:5000
+	- Using minikube ingress
+		- minikube addons enable ingress
+		- minikube service python-package-flask-test-service --url
+			- Get the IP:PORT
 ### Consume:
 		- curl localhost:5000/api/v1/restricted
+		- curl http://[IP:PORT]/api/v1/restricted
 
 ### Clean up
 	- kubectl delete service python-package-flask-test-service
