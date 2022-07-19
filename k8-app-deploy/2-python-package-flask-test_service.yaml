@@ -7,12 +7,12 @@ metadata:
 spec:
   selector:
     app: python-package-flask-test
-  type: LoadBalancer
-  # type: NodePort
+  type: LoadBalancer # for expose as loadbalancer
+  # type: NodePort # for expose as nodeport
   ports:
   - port: 5000
     targetPort: http
-    nodePort: 30163 #30000-32767
+    # nodePort: 30163 #30000-32767 # uncomment if NodePort used
     protocol: TCP
     name: http
 
