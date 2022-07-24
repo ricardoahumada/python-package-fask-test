@@ -29,16 +29,25 @@ pipeline {
         stage('Create image') {
             steps {
                 echo 'creating image...'
+
+                /** Docker hub case **/                
                 // sh 'docker build -t ricardoahumdada/python-package-flask-test -f Dockerfile .'
+
+                /** ACR case **/
                 sh 'docker build -t ricardobootcampregistry.azurecr.io/python-package-flask-test:v1 -f Dockerfile .'
             }
         } 
         stage('Publish image') {
             steps {
                 echo 'pushing image...'
+                
+                /** Docker hub case **/                
                 /*withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
                     sh 'docker push ricardoahumada/python-package-flask-test:latest'
                 }*/
+
+                /** ACR case **/
+                // To get acr url use: az acr list -o table
                 withDockerRegistry([ credentialsId: "acr-credentials", url: "https://ricardobootcampregistry.azurecr.io" ]) {
                     sh 'docker push ricardobootcampregistry.azurecr.io/python-package-flask-test:v1'
                 }
