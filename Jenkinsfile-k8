@@ -68,7 +68,7 @@ pipeline {
                 }
 
                 /** AKS case **/
-                // For getting the server url use: "aks-cluster$ az aks list -o table" and use "Fqdn" value
+                // For getting the server url use: "az aks list -o table" and use "Fqdn" value
                 /*withKubeConfig([credentialsId: 'k8-credentials',serverUrl:'https://saving-kitten-k8s-5846b313.hcp.eastasia.azmk8s.io']) {
                     sh 'kubectl apply -f k8-app-deploy/1-python-package-flask-test_deployment.yaml'
                     sh 'kubectl apply -f k8-app-deploy/2-python-package-flask-test_service.yaml'
