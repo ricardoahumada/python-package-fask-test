@@ -73,6 +73,7 @@ pipeline {
                     sh 'kubectl apply -f k8-app-deploy/1-python-package-flask-test_deployment.yaml'
                     sh 'kubectl apply -f k8-app-deploy/2-python-package-flask-test_service.yaml'
                     sh 'kubectl port-forward service/python-package-flask-test-service 5000:5000 &'
+                    sleep 5 // give 5 secs to stablish the port forward
                 }*/
             }
         }
